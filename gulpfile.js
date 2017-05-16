@@ -26,7 +26,7 @@ gulp.task('html', function() {
         .pipe(connect.reload());
 });
 gulp.task('watch', function() {
-    gulp.watch('./css/*.less', ['html']); //监控css文件
+    gulp.watch('./css/*.less', ['html']); //监控less文件
     gulp.watch('./css/*.css', ['html']); //监控css文件
     gulp.watch('./js/*.js', ['html']); //监控js文件
     gulp.watch(['./*.html'], ['html']); //监控html文件
