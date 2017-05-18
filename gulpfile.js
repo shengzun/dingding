@@ -5,13 +5,15 @@ var connect = require('gulp-connect');
 var  minifyCss = require("gulp-minify-css");
 var livereload = require('gulp-livereload');
 
-/*gulp.task('less', function() {
-    gulp.src('css/!*.less')
+
+gulp.task('less', function() {
+    gulp.src('css/*.less')
         .pipe(less())
         .pipe(gulp.dest('css'))
         .pipe(minifyCss())
         .pipe(livereload());
-});*/
+});
+
 
 gulp.task('connect', function() {
     connect.server({
