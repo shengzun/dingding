@@ -88,6 +88,10 @@ button:active{
 .p-text-center{
   text-align: center;
 }
+/*圆角*/
+.p-radius{
+  border-radius: 5px;
+}
 /*内边距*/
 .p-padding-t{
   padding-top:1.17333rem
@@ -98,7 +102,18 @@ button:active{
 .p-padding-a{
   padding:0.21333rem 0.346666rem;
 }
-
+.p-padding{
+  padding: 0.4rem;
+}
+.p-padding-s{
+  padding: 0.2rem  0;
+}
+.p-padding-lr{
+  padding: 0 0.4rem 0.4rem;
+}
+.p-padding-btn{
+  padding: 0.13rem 0.26rem;
+}
 /*外边距*/
 .p-margin-b-l{
   margin-bottom: 0.2rem;
@@ -112,10 +127,19 @@ button:active{
 .p-margin-r{
   margin-right: 10px;
 }
+.p-m-b{
+  margin-bottom: 0.6rem;
+}
+.p-m-t{
+  margin-top: 0.6rem;
+}
 
 /*文字景色*/
 .p-font-white{
   color:#fff;
+}
+.p-font-blue{
+  color:#2f90f8;
 }
 .p-font-red{
   color: #F07261;
@@ -139,9 +163,17 @@ button:active{
 .p-font-ssm{
   font-size: 12px;
 }
+.p-font-ssms{
+  font-size: 10px;
+}
+
+
 /*背景色*/
 
 /*//黄色*/
+.p-bg-white{
+  background: #fff;
+}
 .p-bg-yellow{
   background:#FFD600;
 }
@@ -262,13 +294,22 @@ button:active{
 }
 /*弹窗*/
 .popup{
+  .popup-img{
+    width: 95%;
 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transform: -webkit-translate(-50%,-50%);
+  }
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background: rgba(34,34,34,0.4);
   position: fixed;
   z-index: 9999;
-  overflow: hidden;
+
   top:0;
   display: none;
   left: 0;
@@ -278,11 +319,18 @@ button:active{
     position: absolute;
     bottom: 0;
     width: 100%;
+    .ul-two{
+      display: none;
+
+    }
     li{
       padding:0.4rem 0.42rem;
       .close{
         width: 0.45rem;
         margin-top: -1rem;
+      }
+      .shu{
+        min-width: 5rem;
       }
       .p-inline{
         width: 30%;
@@ -297,6 +345,10 @@ button:active{
           color: #fff;
         }
       }
+      .p-inline-s{
+        width: 20%;
+        margin-bottom: 1.5%;
+      }
       .ji{
         padding:0.1rem  0.25rem ;
         display: inline-block;
@@ -309,6 +361,15 @@ button:active{
       }
 
     }
+    .minli{
+      height: 0.2rem;
+      padding: 0;
+    }
+    &.hscroll{
+     height: 100%;
+      overflow-y: auto;
+    }
   }
+
 }
 
